@@ -7,233 +7,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --primary: #6366f1;
-      --primary-light: #818cf8;
-      --accent: #f59e0b;
-      --dark: #0f172a;
-      --mid: #1e293b;
-      --card: #1e293b;
-      --border: #334155;
-      --text: #e2e8f0;
-      --muted: #94a3b8;
-      --tag-bg: #312e81;
-      --tag-color: #c7d2fe;
-    }
-
+    :root { --primary: #6366f1; --primary-light: #818cf8; --accent: #f59e0b; --dark: #0f172a; --mid: #1e293b; --card: #1e293b; --border: #334155; --text: #e2e8f0; --muted: #94a3b8; --tag-bg: #312e81; --tag-color: #c7d2fe; }
     html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 60px;
-    }
-    .nav-logo {
-      font-weight: 700; font-size: 1rem; color: var(--primary-light);
-      letter-spacing: -0.3px;
-    }
-    .nav-links a {
-      color: var(--muted); text-decoration: none; font-size: 0.875rem;
-      margin-left: 24px; transition: color .2s;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(15,23,42,0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .nav-logo { font-weight: 700; font-size: 1rem; color: var(--primary-light); }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; margin-left: 24px; }
     .nav-links a:hover { color: var(--text); }
-
-    /* ── HERO ── */
-    .hero {
-      max-width: 860px; margin: 0 auto;
-      padding: 80px 24px 60px;
-      text-align: center;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3);
-      color: var(--primary-light); font-size: 0.8rem; font-weight: 600;
-      padding: 5px 14px; border-radius: 999px; margin-bottom: 24px;
-      letter-spacing: 0.5px; text-transform: uppercase;
-    }
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800; line-height: 1.15;
-      letter-spacing: -1px;
-      background: linear-gradient(135deg, #e2e8f0 0%, var(--primary-light) 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      color: var(--muted); font-size: 1.1rem;
-      max-width: 620px; margin: 0 auto 32px;
-    }
-    .hero-tools {
-      display: flex; flex-wrap: wrap; gap: 10px;
-      justify-content: center; margin-bottom: 40px;
-    }
-    .tool-pill {
-      background: var(--mid); border: 1px solid var(--border);
-      color: var(--muted); font-size: 0.78rem; font-weight: 500;
-      padding: 4px 12px; border-radius: 999px;
-    }
-    .hero-stats {
-      display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;
-    }
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3); color: var(--primary-light); font-size: 0.8rem; font-weight: 600; padding: 5px 14px; border-radius: 999px; margin-bottom: 24px; letter-spacing: 0.5px; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(2rem,5vw,3.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -1px; background: linear-gradient(135deg, #e2e8f0 0%, var(--primary-light) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 620px; margin: 0 auto 32px; }
+    .hero-tools { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px; }
+    .tool-pill { background: var(--mid); border: 1px solid var(--border); color: var(--muted); font-size: 0.78rem; font-weight: 500; padding: 4px 12px; border-radius: 999px; }
+    .hero-stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
     .stat { text-align: center; }
-    .stat-number {
-      font-size: 1.8rem; font-weight: 800; color: var(--primary-light);
-      display: block; letter-spacing: -1px;
-    }
+    .stat-number { font-size: 1.8rem; font-weight: 800; color: var(--primary-light); display: block; letter-spacing: -1px; }
     .stat-label { font-size: 0.8rem; color: var(--muted); }
-
-    /* ── SECTION ── */
-    .section {
-      max-width: 1100px; margin: 0 auto;
-      padding: 60px 24px;
-    }
+    .section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
     .section-header { margin-bottom: 40px; }
-    .section-header h2 {
-      font-size: 1.5rem; font-weight: 700; margin-bottom: 6px;
-    }
+    .section-header h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 6px; }
     .section-header p { color: var(--muted); font-size: 0.9rem; }
-
-    /* ── GRID ── */
-    .apps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 20px;
-    }
-
-    /* ── APP CARD ── */
-    .app-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      transition: transform .2s, border-color .2s, box-shadow .2s;
-      display: flex; flex-direction: column;
-    }
-    .app-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary);
-      box-shadow: 0 12px 40px rgba(99,102,241,0.15);
-    }
-    .card-top {
-      display: flex; align-items: flex-start;
-      justify-content: space-between; margin-bottom: 14px;
-    }
-    .app-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-    }
-    .app-number {
-      font-size: 0.75rem; font-weight: 600; color: var(--muted);
-      background: rgba(255,255,255,0.05);
-      padding: 3px 8px; border-radius: 6px;
-    }
-    .app-card h3 {
-      font-size: 1rem; font-weight: 700; margin-bottom: 8px;
-      color: #f1f5f9;
-    }
-    .app-card p {
-      font-size: 0.875rem; color: var(--muted);
-      flex-grow: 1; margin-bottom: 16px;
-    }
-    .app-tags {
-      display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px;
-    }
-    .tag {
-      background: var(--tag-bg); color: var(--tag-color);
-      font-size: 0.72rem; font-weight: 600;
-      padding: 3px 9px; border-radius: 999px;
-    }
-    .tag.green  { background: #052e16; color: #86efac; }
-    .tag.amber  { background: #451a03; color: #fcd34d; }
+    .apps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .app-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; transition: transform .2s, border-color .2s, box-shadow .2s; display: flex; flex-direction: column; }
+    .app-card:hover { transform: translateY(-4px); border-color: var(--primary); box-shadow: 0 12px 40px rgba(99,102,241,0.15); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+    .app-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    .app-number { font-size: 0.75rem; font-weight: 600; color: var(--muted); background: rgba(255,255,255,0.05); padding: 3px 8px; border-radius: 6px; }
+    .app-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; color: #f1f5f9; }
+    .app-card p { font-size: 0.875rem; color: var(--muted); flex-grow: 1; margin-bottom: 16px; }
+    .app-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .tag { background: var(--tag-bg); color: var(--tag-color); font-size: 0.72rem; font-weight: 600; padding: 3px 9px; border-radius: 999px; }
+    .tag.green { background: #052e16; color: #86efac; }
+    .tag.amber { background: #451a03; color: #fcd34d; }
     .tag.purple { background: #2e1065; color: #d8b4fe; }
-    .tag.blue   { background: #082f49; color: #7dd3fc; }
-    .tag.pink   { background: #500724; color: #fda4af; }
-    .tag.teal   { background: #042f2e; color: #99f6e4; }
-    .app-link {
-      display: inline-flex; align-items: center; gap: 6px;
-      color: var(--primary-light); font-size: 0.82rem; font-weight: 600;
-      text-decoration: none; margin-top: auto;
-      transition: gap .2s;
-    }
+    .tag.blue { background: #082f49; color: #7dd3fc; }
+    .tag.pink { background: #500724; color: #fda4af; }
+    .tag.teal { background: #042f2e; color: #99f6e4; }
+    .app-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary-light); font-size: 0.82rem; font-weight: 600; text-decoration: none; margin-top: auto; transition: gap .2s; }
     .app-link:hover { gap: 10px; }
     .app-link svg { width: 14px; height: 14px; }
-
-    /* ── DIVIDER ── */
-    .divider {
-      border: none; border-top: 1px solid var(--border);
-      margin: 0 24px;
-    }
-
-    /* ── ABOUT ── */
-    .about-box {
-      background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(245,158,11,0.05) 100%);
-      border: 1px solid rgba(99,102,241,0.25);
-      border-radius: 20px; padding: 40px;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
-      align-items: center;
-    }
-    @media (max-width: 640px) {
-      .about-box { grid-template-columns: 1fr; }
-    }
-    .about-box h2 {
-      font-size: 1.6rem; font-weight: 800; margin-bottom: 16px;
-      line-height: 1.2;
-    }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0 24px; }
+    .about-box { background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(245,158,11,0.05) 100%); border: 1px solid rgba(99,102,241,0.25); border-radius: 20px; padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    @media (max-width: 640px) { .about-box { grid-template-columns: 1fr; } }
+    .about-box h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; }
     .about-box h2 span { color: var(--primary-light); }
-    .about-box p {
-      color: var(--muted); font-size: 0.9rem; margin-bottom: 12px;
-    }
-    .about-box a {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--primary); color: #fff;
-      text-decoration: none; font-size: 0.875rem; font-weight: 600;
-      padding: 10px 20px; border-radius: 10px; margin-top: 8px;
-      transition: background .2s, transform .15s;
-    }
-    .about-box a:hover { background: var(--primary-light); transform: translateY(-1px); }
+    .about-box p { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+    .about-box a { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; text-decoration: none; font-size: 0.875rem; font-weight: 600; padding: 10px 20px; border-radius: 10px; margin-top: 8px; transition: background .2s; }
+    .about-box a:hover { background: var(--primary-light); }
     .timeline { list-style: none; }
-    .timeline li {
-      padding: 10px 0; border-bottom: 1px solid var(--border);
-      font-size: 0.875rem; color: var(--muted);
-      display: flex; align-items: center; gap: 10px;
-    }
+    .timeline li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.875rem; color: var(--muted); display: flex; align-items: center; gap: 10px; }
     .timeline li:last-child { border: none; }
-    .timeline li::before {
-      content: "✦"; color: var(--primary-light); font-size: 0.65rem;
-      flex-shrink: 0;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      text-align: center; padding: 40px 24px;
-      color: var(--muted); font-size: 0.8rem;
-      border-top: 1px solid var(--border);
-    }
+    .timeline li::before { content: "✦"; color: var(--primary-light); font-size: 0.65rem; flex-shrink: 0; }
+    footer { text-align: center; padding: 40px 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
     footer a { color: var(--primary-light); text-decoration: none; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .apps-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-    }
+    @media (max-width: 600px) { .apps-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-logo">Gaurav Sharma</div>
   <div class="nav-links">
@@ -242,265 +73,48 @@
     <a href="https://www.linkedin.com/in/gs0601/" target="_blank">LinkedIn ↗</a>
   </div>
 </nav>
-
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">⚡ Built with AI — No Coding Background</div>
   <h1>I build apps with<br/>AI as my co-developer</h1>
-  <p>
-    A non-technical builder experimenting with AI tools to create real,
-    working apps — from Hindu calendar tools to kids' stories and learning aids.
-  </p>
+  <p>A non-technical builder experimenting with AI tools to create real, working apps — from Hindu calendar tools to kids' stories and learning aids.</p>
   <div class="hero-tools">
-    <span class="tool-pill">ChatGPT</span>
-    <span class="tool-pill">Claude</span>
-    <span class="tool-pill">Perplexity</span>
-    <span class="tool-pill">Lovable</span>
-    <span class="tool-pill">v0 by Vercel</span>
-    <span class="tool-pill">GitHub</span>
-    <span class="tool-pill">Vercel</span>
+    <span class="tool-pill">ChatGPT</span><span class="tool-pill">Claude</span><span class="tool-pill">Perplexity</span><span class="tool-pill">Lovable</span><span class="tool-pill">v0 by Vercel</span><span class="tool-pill">GitHub</span><span class="tool-pill">Vercel</span>
   </div>
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-number">10</span>
-      <span class="stat-label">Apps Built</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">0</span>
-      <span class="stat-label">Lines Written Manually</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">5+</span>
-      <span class="stat-label">AI Tools Used</span>
-    </div>
+    <div class="stat"><span class="stat-number">11</span><span class="stat-label">Apps Built</span></div>
+    <div class="stat"><span class="stat-number">0</span><span class="stat-label">Lines Written Manually</span></div>
+    <div class="stat"><span class="stat-number">5+</span><span class="stat-label">AI Tools Used</span></div>
   </div>
 </section>
-
 <hr class="divider"/>
-
-<!-- APPS GRID -->
 <section class="section" id="apps">
   <div class="section-header">
     <h2>🚀 Apps I've Built</h2>
     <p>Every app below was built without writing a single line of code manually.</p>
   </div>
-
   <div class="apps-grid">
-
-    <!-- 1 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🏃</div>
-        <span class="app-number">#01</span>
-      </div>
-      <h3>Daily Mover Guide</h3>
-      <p>A fitness companion that helps users build a daily movement habit with guided exercise suggestions and a simple, motivating interface.</p>
-      <div class="app-tags">
-        <span class="tag green">Health & Fitness</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://daily-mover-guide.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 2 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🚗</div>
-        <span class="app-number">#02</span>
-      </div>
-      <h3>Drive Insight India</h3>
-      <p>Driving intelligence tailored for India — covering traffic patterns, fuel tips, road safety, and useful insights for Indian drivers.</p>
-      <div class="app-tags">
-        <span class="tag amber">Automotive</span>
-        <span class="tag">India-focused</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://drive-insight-india.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 3 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">📖</div>
-        <span class="app-number">#03</span>
-      </div>
-      <h3>Hindi Story Buddy</h3>
-      <p>An engaging app for kids and families to read and enjoy Hindi stories — making Indian language learning fun and accessible.</p>
-      <div class="app-tags">
-        <span class="tag pink">Kids & Education</span>
-        <span class="tag">Hindi</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://hindi-story-buddy.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 4 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🎙️</div>
-        <span class="app-number">#04</span>
-      </div>
-      <h3>Talk Tiny Tales</h3>
-      <p>Short, delightful story experiences for young children — built to spark imagination with tiny bite-sized tales they can explore independently.</p>
-      <div class="app-tags">
-        <span class="tag pink">Kids</span>
-        <span class="tag">Storytelling</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://talk-tiny-tales.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 5 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">📱</div>
-        <span class="app-number">#05</span>
-      </div>
-      <h3>Joy Device Hub</h3>
-      <p>A central hub for exploring and managing devices — designed to bring together information and controls in a clean, joyful interface.</p>
-      <div class="app-tags">
-        <span class="tag blue">Productivity</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://joy-device-hub.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 6 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🃏</div>
-        <span class="app-number">#06</span>
-      </div>
-      <h3>Learning Flash Cards</h3>
-      <p>An interactive flashcard app that makes studying and memorisation easy — perfect for students and lifelong learners wanting to retain knowledge.</p>
-      <div class="app-tags">
-        <span class="tag green">Education</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://learning-flash-cards.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 7 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🗓️</div>
-        <span class="app-number">#07</span>
-      </div>
-      <h3>Panchang 2026–2027</h3>
-      <p>A complete Hindu Panchang calendar for 2026–2027 — covering tithis, nakshatras, festivals, auspicious timings, and more for the whole year.</p>
-      <div class="app-tags">
-        <span class="tag amber">Hindu Calendar</span>
-        <span class="tag">Panchang</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://panchang-2026-2027.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
-    <!-- 8 -->
-    <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🙏</div>
-        <span class="app-number">#08</span>
-      </div>
-      <h3>Hindu Prayer App</h3>
-      <p>A beautifully designed digital companion for Hindu prayers — with stotras, mantras, and daily prayer guides in an accessible, serene experience.</p>
-      <div class="app-tags">
-        <span class="tag amber">Spirituality</span>
-        <span class="tag purple">v0 by Vercel</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://v0-hindu-prayer-app.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
-    </div>
-
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🏃</div><span class="app-number">#01</span></div><h3>Daily Mover Guide</h3><p>A fitness companion that helps users build a daily movement habit with guided exercise suggestions and a simple, motivating interface.</p><div class="app-tags"><span class="tag green">Health &amp; Fitness</span><span class="tag">Lovable</span></div><a class="app-link" href="https://daily-mover-guide.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🚗</div><span class="app-number">#02</span></div><h3>Drive Insight India</h3><p>Driving intelligence tailored for India — covering traffic patterns, fuel tips, road safety, and useful insights for Indian drivers.</p><div class="app-tags"><span class="tag amber">Automotive</span><span class="tag">India-focused</span><span class="tag">Lovable</span></div><a class="app-link" href="https://drive-insight-india.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">📖</div><span class="app-number">#03</span></div><h3>Hindi Story Buddy</h3><p>An engaging app for kids and families to read and enjoy Hindi stories — making Indian language learning fun and accessible.</p><div class="app-tags"><span class="tag pink">Kids &amp; Education</span><span class="tag">Hindi</span><span class="tag">Lovable</span></div><a class="app-link" href="https://hindi-story-buddy.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🎙️</div><span class="app-number">#04</span></div><h3>Talk Tiny Tales</h3><p>Short, delightful story experiences for young children — built to spark imagination with tiny bite-sized tales they can explore independently.</p><div class="app-tags"><span class="tag pink">Kids</span><span class="tag">Storytelling</span><span class="tag">Lovable</span></div><a class="app-link" href="https://talk-tiny-tales.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">📱</div><span class="app-number">#05</span></div><h3>Joy Device Hub</h3><p>A central hub for exploring and managing devices — designed to bring together information and controls in a clean, joyful interface.</p><div class="app-tags"><span class="tag blue">Productivity</span><span class="tag">Lovable</span></div><a class="app-link" href="https://joy-device-hub.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🃏</div><span class="app-number">#06</span></div><h3>Learning Flash Cards</h3><p>An interactive flashcard app that makes studying and memorisation easy — perfect for students and lifelong learners wanting to retain knowledge.</p><div class="app-tags"><span class="tag green">Education</span><span class="tag teal">Vercel</span></div><a class="app-link" href="https://learning-flash-cards.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🗓️</div><span class="app-number">#07</span></div><h3>Panchang 2026–2027</h3><p>A complete Hindu Panchang calendar for 2026–2027 — covering tithis, nakshatras, festivals, auspicious timings, and more for the whole year.</p><div class="app-tags"><span class="tag amber">Hindu Calendar</span><span class="tag">Panchang</span><span class="tag teal">Vercel</span></div><a class="app-link" href="https://panchang-2026-2027.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🙏</div><span class="app-number">#08</span></div><h3>Hindu Prayer App</h3><p>A beautifully designed digital companion for Hindu prayers — with stotras, mantras, and daily prayer guides in an accessible, serene experience.</p><div class="app-tags"><span class="tag amber">Spirituality</span><span class="tag purple">v0 by Vercel</span><span class="tag teal">Vercel</span></div><a class="app-link" href="https://v0-hindu-prayer-app.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🔭</div><span class="app-number">#09</span></div><h3>Jyotisha Paathshaala</h3><p>A beginner-friendly learning platform for Vedic Astrology (Jyotish) — covering fundamentals like signs, houses, planets, and dashas in an accessible format for curious minds.</p><div class="app-tags"><span class="tag amber">Astrology</span><span class="tag">Hindu Vedic</span><span class="tag">Lovable</span></div><a class="app-link" href="https://astro-pathshala.lovable.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🎨</div><span class="app-number">#10</span></div><h3>Draw with Me!</h3><p>A fun, interactive drawing app that lets users sketch, doodle, and create artwork right in the browser — with a playful interface and easy-to-use tools.</p><div class="app-tags"><span class="tag pink">Kids &amp; Creativity</span><span class="tag">Drawing</span><span class="tag teal">Vercel</span></div><a class="app-link" href="https://draw-with-me-psi.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
+    <div class="app-card"><div class="card-top"><div class="app-icon" style="background:#1e293b;">🍛</div><span class="app-number">#11</span></div><h3>Protein Thali Guide</h3><p>A bilingual (Hindi + English) nutrition awareness app for Indian users — understand the protein in your everyday thali without calorie counting, just awareness.</p><div class="app-tags"><span class="tag green">Nutrition</span><span class="tag">Hindi</span><span class="tag">India-focused</span><span class="tag">Lovable</span></div><a class="app-link" href="https://protein-thali-guide.lovable.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a></div>
   </div>
-    <!-- 9 -->
-        <div class="app-card">
-            <div class="card-top">
-                <div class="app-icon" style="background:#1e293b;">🌌</div>
-                <span class="app-number">#09</span>
-            </div>
-            <h3>Jyotisha Paathshaala</h3>
-            <p>A beginner-friendly learning platform for Vedic Astrology (Jyotish) — covering fundamentals like signs, houses, planets, and dashas in an accessible format for curious minds.
-
-            <div class="app-tags">
-                <span class="tag amber">Astrology</span>
-                <span class="tag">Hindu Vedic</span>
-                <span class="tag teal">Lovable</span>
-            </div>
-            <a class="app-link" href="https://astro-pathshala.lovable.app/" target="_blank">
-                View App
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-        </div>
-
-        <!-- 10 -->
-        <div class="app-card">
-            <div class="card-top">
-                <div class="app-icon" style="background:#1e293b;">🎨</div>
-                <span class="app-number">#10</span>
-            </div>
-            <h3>Draw with Me!</h3>
-            <p>A fun, interactive drawing app that lets users sketch, doodle, and create artwork right in the browser — with a playful interface and easy-to-use tools.
-
-            <div class="app-tags">
-                <span class="tag amber">Drawing</span>
-                <span class="tag">Kids & Creativity</span>
-                <span class="tag teal">Vercel</span>
-            </div>
-            <a class="app-link" href="https://draw-with-me-psi.vercel.app/" target="_blank">
-                View App
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-            </a>
-        </div>  
 </section>
-
 <hr class="divider"/>
-
-<!-- ABOUT -->
 <section class="section" id="about">
   <div class="about-box">
     <div>
       <h2>Built by curiosity,<br/><span>powered by AI</span></h2>
-      <p>
-        I'm Gaurav Sharma — not a developer, but someone deeply curious about what's
-        possible when you combine an idea with the right AI tools.
-      </p>
-      <p>
-        These 10 apps represent my experiments in AI-assisted building — using ChatGPT,
-        Claude, Perplexity, Lovable, v0, GitHub, and Vercel to go from idea to live app
-        without writing code.
-      </p>
-      <p>
-        My focus areas: Indian culture, spirituality, kids' learning, and everyday utility
-        tools for Indian users.
-      </p>
-      <a href="https://www.linkedin.com/in/gs0601/" target="_blank">
-        Connect on LinkedIn ↗
-      </a>
+      <p>I'm Gaurav Sharma — not a developer, but someone deeply curious about what's possible when you combine an idea with the right AI tools.</p>
+      <p>These 11 apps represent my experiments in AI-assisted building — using ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, and Vercel to go from idea to live app without writing code.</p>
+      <p>My focus areas: Indian culture, spirituality, kids' learning, nutrition, and everyday utility tools for Indian users.</p>
+      <a href="https://www.linkedin.com/in/gs0601/" target="_blank">Connect on LinkedIn ↗</a>
     </div>
     <div>
       <ul class="timeline">
@@ -509,12 +123,12 @@
         <li>Explored v0 by Vercel for UI-first app creation</li>
         <li>Deployed apps live using GitHub + Vercel pipeline</li>
         <li>Built tools in Hindi, spirituality &amp; kids' education space</li>
-        <li>10 live apps — and still building</li>
+        <li>Added Vedic astrology, drawing &amp; nutrition apps to the portfolio</li>
+        <li>11 live apps — and still building</li>
       </ul>
     </div>
   </div>
 </section>
-
 <footer>
   Built by Gaurav Sharma ·
   <a href="https://github.com/gaurav-gps-growth" target="_blank">GitHub</a> ·
@@ -522,6 +136,5 @@
   <br/><br/>
   Made with AI tools — ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, Vercel
 </footer>
-
 </body>
 </html>
