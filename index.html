@@ -9,16 +9,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaurav Sharma — AI-Built Apps</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
       --primary: #6366f1;
       --primary-light: #818cf8;
       --accent: #f59e0b;
@@ -41,7 +31,6 @@
       line-height: 1.6;
     }
 
-    /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
       background: rgba(15, 23, 42, 0.9);
@@ -61,7 +50,6 @@
     }
     .nav-links a:hover { color: var(--text); }
 
-    /* ── HERO ── */
     .hero {
       max-width: 860px; margin: 0 auto;
       padding: 80px 24px 60px;
@@ -105,7 +93,6 @@
     }
     .stat-label { font-size: 0.8rem; color: var(--muted); }
 
-    /* ── SECTION ── */
     .section {
       max-width: 1100px; margin: 0 auto;
       padding: 60px 24px;
@@ -116,14 +103,12 @@
     }
     .section-header p { color: var(--muted); font-size: 0.9rem; }
 
-    /* ── GRID ── */
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 20px;
     }
 
-    /* ── APP CARD ── */
     .app-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -183,13 +168,11 @@
     .app-link:hover { gap: 10px; }
     .app-link svg { width: 14px; height: 14px; }
 
-    /* ── DIVIDER ── */
     .divider {
       border: none; border-top: 1px solid var(--border);
       margin: 0 24px;
     }
 
-    /* ── ABOUT ── */
     .about-box {
       background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(245,158,11,0.05) 100%);
       border: 1px solid rgba(99,102,241,0.25);
@@ -224,11 +207,10 @@
     }
     .timeline li:last-child { border: none; }
     .timeline li::before {
-      content: "✦"; color: var(--primary-light); font-size: 0.65rem;
+      content: "\2726"; color: var(--primary-light); font-size: 0.65rem;
       flex-shrink: 0;
     }
 
-    /* ── INSTALL SECTION ── */
     .install-section {
       background: linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(20,184,166,0.05) 100%);
       border: 1px solid var(--border);
@@ -251,7 +233,6 @@
     }
     .platform-card h3 {
       font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;
-      display: flex; align-items: center; gap: 8px;
     }
     .platform-card ol {
       padding-left: 18px; color: var(--muted); font-size: 0.85rem;
@@ -280,7 +261,6 @@
       color: var(--text);
     }
 
-    /* ── FOOTER ── */
     footer {
       text-align: center; padding: 40px 24px;
       color: var(--muted); font-size: 0.8rem;
@@ -288,7 +268,6 @@
     }
     footer a { color: var(--primary-light); text-decoration: none; }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .apps-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
@@ -307,14 +286,10 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-badge">⚡ Built with AI — No Coding Background</div>
   <h1>I build apps with<br/>AI as my co-developer</h1>
-  <p>
-    A non-technical builder experimenting with AI tools to create real,
-    working apps — from Hindu calendar tools to kids' stories and learning aids.
-  </p>
+  <p>A non-technical builder experimenting with AI tools to create real, working apps — from Hindu calendar tools to kids' stories and learning aids.</p>
   <div class="hero-tools">
     <span class="tool-pill">ChatGPT</span>
     <span class="tool-pill">Claude</span>
@@ -325,257 +300,115 @@
     <span class="tool-pill">Vercel</span>
   </div>
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-number">12</span>
-      <span class="stat-label">Apps Built</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">0</span>
-      <span class="stat-label">Lines Written Manually</span>
-    </div>
-    <div class="stat">
-      <span class="stat-number">5+</span>
-      <span class="stat-label">AI Tools Used</span>
-    </div>
+    <div class="stat"><span class="stat-number">12</span><span class="stat-label">Apps Built</span></div>
+    <div class="stat"><span class="stat-number">0</span><span class="stat-label">Lines Written Manually</span></div>
+    <div class="stat"><span class="stat-number">5+</span><span class="stat-label">AI Tools Used</span></div>
   </div>
 </section>
 
 <hr class="divider"/>
 
-<!-- APPS GRID -->
 <section class="section" id="apps">
   <div class="section-header">
     <h2>🚀 Apps I've Built</h2>
     <p>Every app below was built without writing a single line of code manually.</p>
   </div>
-
   <div class="apps-grid">
 
-    <!-- 1 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🏃</div>
-        <span class="app-number">#01</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🏃</div><span class="app-number">#01</span></div>
       <h3>Daily Mover Guide</h3>
       <p>Built for my wife, who wanted to restart her fitness journey but found the gym "too much, too soon." A collection of basic compound movements she can do anywhere, anytime — no equipment, no intimidation, just a gentle path back to feeling good.</p>
-      <div class="app-tags">
-        <span class="tag green">Health & Fitness</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://daily-mover-guide.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag green">Health &amp; Fitness</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://daily-mover-guide.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 2 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🚗</div>
-        <span class="app-number">#02</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🚗</div><span class="app-number">#02</span></div>
       <h3>Drive Insight India</h3>
       <p>Your window into India's fast-moving auto market — car configurations, pricing, sales data, and the latest news in one place. Built to help enthusiasts and buyers stay ahead of Indian automotive trends without drowning in scattered sources.</p>
-      <div class="app-tags">
-        <span class="tag amber">Automotive</span>
-        <span class="tag">India-focused</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://drive-insight-india.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag amber">Automotive</span><span class="tag">India-focused</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://drive-insight-india.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 3 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">📖</div>
-        <span class="app-number">#03</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">📖</div><span class="app-number">#03</span></div>
       <h3>Hindi Story Buddy</h3>
       <p>Stories with a purpose — designed to build core skills in toddlers: helping, emotions, turn-taking, transitions, sensory awareness, flexibility, safety, and social behaviour. Interactive narrations come in varied lengths, so you can pick a story that fits your child's age and attention span that day.</p>
-      <div class="app-tags">
-        <span class="tag pink">Kids & Education</span>
-        <span class="tag">Hindi</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://hindi-story-buddy.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag pink">Kids &amp; Education</span><span class="tag">Hindi</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://hindi-story-buddy.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 4 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🎙️</div>
-        <span class="app-number">#04</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🎙️</div><span class="app-number">#04</span></div>
       <h3>Talk Tiny Tales</h3>
       <p>A flashcard-style vocabulary game for 3–4 year olds, designed for kids whose speech is still taking shape. Playful, low-pressure interactions that make word recognition feel like a game rather than a lesson.</p>
-      <div class="app-tags">
-        <span class="tag pink">Kids</span>
-        <span class="tag">Storytelling</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://talk-tiny-tales.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag pink">Kids</span><span class="tag">Storytelling</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://talk-tiny-tales.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 5 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">📱</div>
-        <span class="app-number">#05</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">📱</div><span class="app-number">#05</span></div>
       <h3>Joy Device Hub</h3>
       <p>An interactive dashboard tracking sales and market trends for consumer electronics in India. Not just data — it also helps you discover devices that match your specific interests and budget, making the crowded Indian electronics market a little easier to navigate.</p>
-      <div class="app-tags">
-        <span class="tag blue">Productivity</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://joy-device-hub.lovable.app" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag blue">Productivity</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://joy-device-hub.lovable.app" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 6 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🃏</div>
-        <span class="app-number">#06</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🃏</div><span class="app-number">#06</span></div>
       <h3>Learning Flash Cards</h3>
       <p>Built for the curious 3–4 year old mind — this app teaches the building blocks of thinking: What, When, Why, Who, Where, and How. Interactive questions help little ones develop comprehension and critical thinking through play, not pressure.</p>
-      <div class="app-tags">
-        <span class="tag green">Education</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://learning-flash-cards.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag green">Education</span><span class="tag teal">Vercel</span></div>
+      <a class="app-link" href="https://learning-flash-cards.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 7 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🗓️</div>
-        <span class="app-number">#07</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🗓️</div><span class="app-number">#07</span></div>
       <h3>Panchang 2026–2027</h3>
       <p>Born out of my research for sanatan.today and a shared curiosity about the Vedic calendar — I built this to make the rich, complex world of tithis, nakshatras, and auspicious timings accessible for everyday life.</p>
-      <div class="app-tags">
-        <span class="tag amber">Hindu Calendar</span>
-        <span class="tag">Panchang</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://panchang-2026-2027.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag amber">Hindu Calendar</span><span class="tag">Panchang</span><span class="tag teal">Vercel</span></div>
+      <a class="app-link" href="https://panchang-2026-2027.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 8 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🙏</div>
-        <span class="app-number">#08</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🙏</div><span class="app-number">#08</span></div>
       <h3>Hindu Prayer App</h3>
       <p>A distraction-free digital sanctuary for daily spiritual connection. Built as a serene space for Stotras and Mantras — a bridge between ancient practice and modern convenience, free from the noise of the internet.</p>
-      <div class="app-tags">
-        <span class="tag amber">Spirituality</span>
-        <span class="tag purple">v0 by Vercel</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://v0-hindu-prayer-app.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag amber">Spirituality</span><span class="tag purple">v0 by Vercel</span><span class="tag teal">Vercel</span></div>
+      <a class="app-link" href="https://v0-hindu-prayer-app.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 9 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🔭</div>
-        <span class="app-number">#09</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🔭</div><span class="app-number">#09</span></div>
       <h3>Jyotisha Paathshaala</h3>
       <p>My wife studies astrology not for predictions, but to understand how planetary movements shape our lives. I built this "Paathshaala" (school) as her beginner-friendly gateway into the science of signs, houses, and planets.</p>
-      <div class="app-tags">
-        <span class="tag amber">Astrology</span>
-        <span class="tag">Hindu Vedic</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://astro-pathshala.lovable.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag amber">Astrology</span><span class="tag">Hindu Vedic</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://astro-pathshala.lovable.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 10 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🎨</div>
-        <span class="app-number">#10</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🎨</div><span class="app-number">#10</span></div>
       <h3>Draw with Me!</h3>
       <p>A fun, interactive drawing app that lets users sketch, doodle, and create artwork right in the browser — with a playful interface and easy-to-use tools.</p>
-      <div class="app-tags">
-        <span class="tag pink">Kids & Creativity</span>
-        <span class="tag">Drawing</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://draw-with-me-psi.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag pink">Kids &amp; Creativity</span><span class="tag">Drawing</span><span class="tag teal">Vercel</span></div>
+      <a class="app-link" href="https://draw-with-me-psi.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- 11 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🍛</div>
-        <span class="app-number">#11</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🍛</div><span class="app-number">#11</span></div>
       <h3>Protein Thali Guide</h3>
       <p>A bilingual (Hindi + English) nutrition awareness app for Indian users — understand the protein in your everyday thali without calorie counting, just awareness.</p>
-      <div class="app-tags">
-        <span class="tag green">Nutrition</span>
-        <span class="tag">Hindi</span>
-        <span class="tag">India-focused</span>
-        <span class="tag">Lovable</span>
-      </div>
-      <a class="app-link" href="https://protein-thali-guide.lovable.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag green">Nutrition</span><span class="tag">Hindi</span><span class="tag">India-focused</span><span class="tag">Lovable</span></div>
+      <a class="app-link" href="https://protein-thali-guide.lovable.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
-    <!-- #12 -->
     <div class="app-card">
-      <div class="card-top">
-        <div class="app-icon" style="background:#1e293b;">🧘</div>
-        <span class="app-number">#12</span>
-      </div>
+      <div class="card-top"><div class="app-icon" style="background:#1e293b;">🧘</div><span class="app-number">#12</span></div>
       <h3>Senior Fitness</h3>
       <p>A bilingual (Hindi + English) guided fitness app for senior citizens — 6 gentle exercises in 15 minutes, no equipment needed. Features animated GIFs, audio instructions, and warm-up safety notes for safe daily practice.</p>
-      <div class="app-tags">
-        <span class="tag green">Senior Health</span>
-        <span class="tag">Hindi</span>
-        <span class="tag">Bilingual</span>
-        <span class="tag teal">Vercel</span>
-      </div>
-      <a class="app-link" href="https://senior-fitness-app.vercel.app/" target="_blank">
-        View App
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
-      </a>
+      <div class="app-tags"><span class="tag green">Senior Health</span><span class="tag">Hindi</span><span class="tag">Bilingual</span><span class="tag teal">Vercel</span></div>
+      <a class="app-link" href="https://senior-fitness-app.vercel.app/" target="_blank">View App <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
     </div>
 
   </div>
@@ -583,27 +416,14 @@
 
 <hr class="divider"/>
 
-<!-- ABOUT -->
 <section class="section" id="about">
   <div class="about-box">
     <div>
       <h2>Built by curiosity,<br/><span>powered by AI</span></h2>
-      <p>
-        I'm Gaurav Sharma — not a developer, but someone deeply curious about what's
-        possible when you combine an idea with the right AI tools.
-      </p>
-      <p>
-        These 12 apps represent my experiments in AI-assisted building — using ChatGPT,
-        Claude, Perplexity, Lovable, v0, GitHub, and Vercel to go from idea to live app
-        without writing code.
-      </p>
-      <p>
-        My focus areas: Indian culture, spirituality, kids' learning, nutrition, and everyday
-        utility tools for Indian users.
-      </p>
-      <a href="https://www.linkedin.com/in/gs0601/" target="_blank">
-        Connect on LinkedIn ↗
-      </a>
+      <p>I'm Gaurav Sharma — not a developer, but someone deeply curious about what's possible when you combine an idea with the right AI tools.</p>
+      <p>These 12 apps represent my experiments in AI-assisted building — using ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, and Vercel to go from idea to live app without writing code.</p>
+      <p>My focus areas: Indian culture, spirituality, kids' learning, nutrition, and everyday utility tools for Indian users.</p>
+      <a href="https://www.linkedin.com/in/gs0601/" target="_blank">Connect on LinkedIn ↗</a>
     </div>
     <div>
       <ul class="timeline">
@@ -621,14 +441,11 @@
 
 <hr class="divider"/>
 
-<!-- INSTALL AS APP -->
 <section class="section" id="install">
   <div class="install-section">
     <h2>📲 Save Any App to Your Home Screen</h2>
     <p>Every app here is mobile-friendly and can be saved as a shortcut — opens full screen, no browser bar, just like a native app.</p>
-
     <div class="install-platforms">
-
       <div class="platform-card">
         <h3>🍎 iPhone / iPad (Safari)</h3>
         <ol>
@@ -637,11 +454,8 @@
           <li>Scroll down and tap <strong>"Add to Home Screen"</strong></li>
           <li>Edit the name if you like, then tap <strong>Add</strong></li>
         </ol>
-        <div class="install-tip">
-          <strong>Tip:</strong> If you delete the shortcut, just reopen Safari, find the app in your history, and repeat. Nothing is lost — the app lives on the web.
-        </div>
+        <div class="install-tip"><strong>Tip:</strong> If you delete the shortcut, just reopen Safari, find the app in your history, and repeat. Nothing is lost — the app lives on the web.</div>
       </div>
-
       <div class="platform-card">
         <h3>🤖 Android (Chrome)</h3>
         <ol>
@@ -650,39 +464,22 @@
           <li>Tap <strong>"Add to Home screen"</strong></li>
           <li>Confirm by tapping <strong>Add</strong></li>
         </ol>
-        <div class="install-tip">
-          <strong>Shortcut:</strong> Some Android devices show an <em>"Install app"</em> banner at the bottom of Chrome — tap that for a one-step install.
-        </div>
+        <div class="install-tip"><strong>Shortcut:</strong> Some Android devices show an <em>"Install app"</em> banner at the bottom of Chrome — tap that for a one-step install.</div>
       </div>
-
     </div>
-
     <p class="notes-heading">💡 A Few Things Worth Knowing</p>
     <div class="notes-grid">
-      <div class="note-card">
-        <strong>Works offline?</strong>
-        Some apps (like Panchang) are fully offline-capable once loaded. Others need an active connection.
-      </div>
-      <div class="note-card">
-        <strong>No app store needed.</strong>
-        These are web apps — nothing to download, nothing to update manually. Always the latest version.
-      </div>
-      <div class="note-card">
-        <strong>Safe to delete.</strong>
-        Removing the shortcut from your Home Screen doesn't delete anything. Just reinstall from the link anytime.
-      </div>
-      <div class="note-card">
-        <strong>Best browser:</strong>
-        Always use Safari on iPhone and Chrome on Android for the smoothest install experience.
-      </div>
+      <div class="note-card"><strong>Works offline?</strong> Some apps (like Panchang) are fully offline-capable once loaded. Others need an active connection.</div>
+      <div class="note-card"><strong>No app store needed.</strong> These are web apps — nothing to download, nothing to update manually. Always the latest version.</div>
+      <div class="note-card"><strong>Safe to delete.</strong> Removing the shortcut from your Home Screen doesn't delete anything. Just reinstall from the link anytime.</div>
+      <div class="note-card"><strong>Best browser:</strong> Always use Safari on iPhone and Chrome on Android for the smoothest install experience.</div>
     </div>
-
   </div>
 </section>
 
 <footer>
-  Built by Gaurav Sharma ·
-  <a href="https://github.com/gaurav-gps-growth" target="_blank">GitHub</a> ·
+  Built by Gaurav Sharma &middot;
+  <a href="https://github.com/gaurav-gps-growth" target="_blank">GitHub</a> &middot;
   <a href="https://www.linkedin.com/in/gs0601/" target="_blank">LinkedIn</a>
   <br/><br/>
   Made with AI tools — ChatGPT, Claude, Perplexity, Lovable, v0, GitHub, Vercel
