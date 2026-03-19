@@ -9,6 +9,16 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaurav Sharma — AI-Built Apps</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
       --primary: #6366f1;
       --primary-light: #818cf8;
       --accent: #f59e0b;
@@ -218,6 +228,58 @@
       flex-shrink: 0;
     }
 
+    /* ── INSTALL SECTION ── */
+    .install-section {
+      background: linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(20,184,166,0.05) 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px; padding: 40px;
+    }
+    .install-section h2 {
+      font-size: 1.4rem; font-weight: 800; margin-bottom: 6px;
+    }
+    .install-section > p {
+      color: var(--muted); font-size: 0.9rem; margin-bottom: 32px;
+    }
+    .install-platforms {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 640px) { .install-platforms { grid-template-columns: 1fr; } }
+    .platform-card {
+      background: var(--mid); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px;
+    }
+    .platform-card h3 {
+      font-size: 0.95rem; font-weight: 700; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .platform-card ol {
+      padding-left: 18px; color: var(--muted); font-size: 0.85rem;
+      line-height: 1.8;
+    }
+    .platform-card ol li { margin-bottom: 4px; }
+    .install-tip {
+      background: rgba(99,102,241,0.08); border-left: 3px solid var(--primary-light);
+      border-radius: 0 8px 8px 0; padding: 12px 16px;
+      color: var(--muted); font-size: 0.82rem; margin-top: 16px;
+      line-height: 1.6;
+    }
+    .install-tip strong { color: var(--primary-light); }
+    .notes-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .note-card {
+      background: var(--mid); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px;
+      font-size: 0.83rem; color: var(--muted); line-height: 1.6;
+    }
+    .note-card strong { color: var(--text); display: block; margin-bottom: 4px; }
+    .notes-heading {
+      font-size: 1rem; font-weight: 700; margin-bottom: 16px;
+      color: var(--text);
+    }
+
     /* ── FOOTER ── */
     footer {
       text-align: center; padding: 40px 24px;
@@ -240,6 +302,7 @@
   <div class="nav-links">
     <a href="#apps">Apps</a>
     <a href="#about">About</a>
+    <a href="#install">Install</a>
     <a href="https://www.linkedin.com/in/gs0601/" target="_blank">LinkedIn ↗</a>
   </div>
 </nav>
@@ -295,9 +358,9 @@
         <span class="app-number">#01</span>
       </div>
       <h3>Daily Mover Guide</h3>
-      <p>Built for my wife, who wanted to restart her fitness journey but found the gym “too much, too soon.” A collection of basic compound movements she can do anywhere, anytime — no equipment, no intimidation, just a gentle path back to feeling good.</p>
+      <p>Built for my wife, who wanted to restart her fitness journey but found the gym "too much, too soon." A collection of basic compound movements she can do anywhere, anytime — no equipment, no intimidation, just a gentle path back to feeling good.</p>
       <div class="app-tags">
-        <span class="tag green">Health &amp; Fitness</span>
+        <span class="tag green">Health & Fitness</span>
         <span class="tag">Lovable</span>
       </div>
       <a class="app-link" href="https://daily-mover-guide.lovable.app" target="_blank">
@@ -313,7 +376,7 @@
         <span class="app-number">#02</span>
       </div>
       <h3>Drive Insight India</h3>
-      <p>Your window into India’s fast-moving auto market — car configurations, pricing, sales data, and the latest news in one place. Built to help enthusiasts and buyers stay ahead of Indian automotive trends without drowning in scattered sources.</p>
+      <p>Your window into India's fast-moving auto market — car configurations, pricing, sales data, and the latest news in one place. Built to help enthusiasts and buyers stay ahead of Indian automotive trends without drowning in scattered sources.</p>
       <div class="app-tags">
         <span class="tag amber">Automotive</span>
         <span class="tag">India-focused</span>
@@ -332,10 +395,10 @@
         <span class="app-number">#03</span>
       </div>
       <h3>Hindi Story Buddy</h3>
-      <p>Stories with a purpose — designed to build core skills in toddlers: helping, emotions, turn-taking, transitions, sensory awareness, flexibility, safety, and social behaviour. Interactive narrations come in varied lengths, so you can pick a story that fits your child’s age and attention span that day.</p>
+      <p>Stories with a purpose — designed to build core skills in toddlers: helping, emotions, turn-taking, transitions, sensory awareness, flexibility, safety, and social behaviour. Interactive narrations come in varied lengths, so you can pick a story that fits your child's age and attention span that day.</p>
       <div class="app-tags">
-        <span class="tag pink">Kids &amp; Education</span>
-        <span class="tag">Toddlers</span>
+        <span class="tag pink">Kids & Education</span>
+        <span class="tag">Hindi</span>
         <span class="tag">Lovable</span>
       </div>
       <a class="app-link" href="https://hindi-story-buddy.lovable.app" target="_blank">
@@ -353,8 +416,8 @@
       <h3>Talk Tiny Tales</h3>
       <p>A flashcard-style vocabulary game for 3–4 year olds, designed for kids whose speech is still taking shape. Playful, low-pressure interactions that make word recognition feel like a game rather than a lesson.</p>
       <div class="app-tags">
-        <span class="tag pink">Ages 3–4</span>
-        <span class="tag">Speech &amp; Vocab</span>
+        <span class="tag pink">Kids</span>
+        <span class="tag">Storytelling</span>
         <span class="tag">Lovable</span>
       </div>
       <a class="app-link" href="https://talk-tiny-tales.lovable.app" target="_blank">
@@ -372,8 +435,7 @@
       <h3>Joy Device Hub</h3>
       <p>An interactive dashboard tracking sales and market trends for consumer electronics in India. Not just data — it also helps you discover devices that match your specific interests and budget, making the crowded Indian electronics market a little easier to navigate.</p>
       <div class="app-tags">
-        <span class="tag blue">Consumer Electronics</span>
-        <span class="tag">India-focused</span>
+        <span class="tag blue">Productivity</span>
         <span class="tag">Lovable</span>
       </div>
       <a class="app-link" href="https://joy-device-hub.lovable.app" target="_blank">
@@ -391,8 +453,7 @@
       <h3>Learning Flash Cards</h3>
       <p>Built for the curious 3–4 year old mind — this app teaches the building blocks of thinking: What, When, Why, Who, Where, and How. Interactive questions help little ones develop comprehension and critical thinking through play, not pressure.</p>
       <div class="app-tags">
-        <span class="tag green">Ages 3–4</span>
-        <span class="tag">Critical Thinking</span>
+        <span class="tag green">Education</span>
         <span class="tag teal">Vercel</span>
       </div>
       <a class="app-link" href="https://learning-flash-cards.vercel.app/" target="_blank">
@@ -446,7 +507,7 @@
         <span class="app-number">#09</span>
       </div>
       <h3>Jyotisha Paathshaala</h3>
-      <p>My wife studies astrology not for predictions, but to understand how planetary movements shape our lives. I built this “Paathshaala” (school) as her beginner-friendly gateway into the science of signs, houses, and planets.</p>
+      <p>My wife studies astrology not for predictions, but to understand how planetary movements shape our lives. I built this "Paathshaala" (school) as her beginner-friendly gateway into the science of signs, houses, and planets.</p>
       <div class="app-tags">
         <span class="tag amber">Astrology</span>
         <span class="tag">Hindu Vedic</span>
@@ -467,7 +528,7 @@
       <h3>Draw with Me!</h3>
       <p>A fun, interactive drawing app that lets users sketch, doodle, and create artwork right in the browser — with a playful interface and easy-to-use tools.</p>
       <div class="app-tags">
-        <span class="tag pink">Kids &amp; Creativity</span>
+        <span class="tag pink">Kids & Creativity</span>
         <span class="tag">Drawing</span>
         <span class="tag teal">Vercel</span>
       </div>
@@ -555,6 +616,67 @@
         <li>12 live apps — and still building</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- INSTALL AS APP -->
+<section class="section" id="install">
+  <div class="install-section">
+    <h2>📲 Save Any App to Your Home Screen</h2>
+    <p>Every app here is mobile-friendly and can be saved as a shortcut — opens full screen, no browser bar, just like a native app.</p>
+
+    <div class="install-platforms">
+
+      <div class="platform-card">
+        <h3>🍎 iPhone / iPad (Safari)</h3>
+        <ol>
+          <li>Open the app link in <strong>Safari</strong> — not Chrome, not Instagram/WhatsApp</li>
+          <li>Tap the <strong>Share icon</strong> at the bottom (box with arrow pointing up)</li>
+          <li>Scroll down and tap <strong>"Add to Home Screen"</strong></li>
+          <li>Edit the name if you like, then tap <strong>Add</strong></li>
+        </ol>
+        <div class="install-tip">
+          <strong>Tip:</strong> If you delete the shortcut, just reopen Safari, find the app in your history, and repeat. Nothing is lost — the app lives on the web.
+        </div>
+      </div>
+
+      <div class="platform-card">
+        <h3>🤖 Android (Chrome)</h3>
+        <ol>
+          <li>Open the app link in <strong>Chrome</strong></li>
+          <li>Tap the <strong>⋮ menu</strong> (three dots, top right)</li>
+          <li>Tap <strong>"Add to Home screen"</strong></li>
+          <li>Confirm by tapping <strong>Add</strong></li>
+        </ol>
+        <div class="install-tip">
+          <strong>Shortcut:</strong> Some Android devices show an <em>"Install app"</em> banner at the bottom of Chrome — tap that for a one-step install.
+        </div>
+      </div>
+
+    </div>
+
+    <p class="notes-heading">💡 A Few Things Worth Knowing</p>
+    <div class="notes-grid">
+      <div class="note-card">
+        <strong>Works offline?</strong>
+        Some apps (like Panchang) are fully offline-capable once loaded. Others need an active connection.
+      </div>
+      <div class="note-card">
+        <strong>No app store needed.</strong>
+        These are web apps — nothing to download, nothing to update manually. Always the latest version.
+      </div>
+      <div class="note-card">
+        <strong>Safe to delete.</strong>
+        Removing the shortcut from your Home Screen doesn't delete anything. Just reinstall from the link anytime.
+      </div>
+      <div class="note-card">
+        <strong>Best browser:</strong>
+        Always use Safari on iPhone and Chrome on Android for the smoothest install experience.
+      </div>
+    </div>
+
   </div>
 </section>
 
