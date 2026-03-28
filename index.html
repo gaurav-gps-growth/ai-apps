@@ -272,7 +272,49 @@
       .apps-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
     }
-  </style>
+  
+    /* ── PROFILE BANNER ── */
+    .profile-banner {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .profile-badge {
+      display: inline-block;
+      background: rgba(99,102,241,0.15);
+      color: var(--primary-light);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .profile-text { flex: 1; min-width: 260px; }
+    .profile-text h2 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .profile-role { color: var(--primary-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 16px; }
+    .profile-bio { color: var(--muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px; max-width: 560px; }
+    .profile-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: white; text-decoration: none;
+      padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+      transition: background .2s;
+    }
+    .profile-cta:hover { background: var(--primary-light); }
+    .profile-cta svg { width: 16px; height: 16px; }
+    .profile-stats { display: flex; flex-direction: column; gap: 28px; min-width: 160px; }
+    .pstat { display: flex; flex-direction: column; }
+    .pstat-num { font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .pstat-label { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+    @media (max-width: 768px) {
+      .profile-banner { padding: 32px 24px; gap: 32px; }
+      .profile-stats { flex-direction: row; flex-wrap: wrap; gap: 20px; }
+    }</style>
 </head>
 <body>
 
@@ -282,6 +324,7 @@
     <a href="#apps">Apps</a>
     <a href="#about">About</a>
     <a href="#install">Install</a>
+    <a href="#profile">Profile</a>
     <a href="https://www.linkedin.com/in/gs0601/" target="_blank">LinkedIn ↗</a>
   </div>
 </nav>
@@ -521,6 +564,29 @@
   </div>
 </section>
 
+
+<hr class="divider"/>
+
+<!-- PROFILE -->
+<section class="section" id="profile">
+  <div class="profile-banner">
+    <div class="profile-text">
+      <div class="profile-badge">👤 The Builder Behind the Apps</div>
+      <h2>Gaurav Sharma</h2>
+      <p class="profile-role">Director of Growth · B2B SaaS · Customer Success · AI App Builder</p>
+      <p class="profile-bio">12+ years growing enterprise accounts, protecting revenue, and driving adoption at SaaS companies — while building 15 AI-powered apps on the side. Customer Success, Enterprise Sales, and enough product intuition to ship real things. No traditional coding background. Just curiosity and the right tools.</p>
+      <a class="profile-cta" href="https://gaurav6189.lovable.app" target="_blank">
+        View Full Profile &amp; Resume
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+    <div class="profile-stats">
+      <div class="pstat"><span class="pstat-num">12+</span><span class="pstat-label">Years in B2B SaaS</span></div>
+      <div class="pstat"><span class="pstat-num">15</span><span class="pstat-label">AI apps shipped</span></div>
+      <div class="pstat"><span class="pstat-num">0</span><span class="pstat-label">Lines coded manually</span></div>
+    </div>
+  </div>
+</section>
 <footer>
   Built by Gaurav Sharma &middot;
   <a href="https://github.com/gaurav-gps-growth" target="_blank">GitHub</a> &middot;
