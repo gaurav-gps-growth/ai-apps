@@ -367,7 +367,17 @@
     @keyframes tickerScroll {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
-    }</style>
+    }
+    /* ── SUPPORT BUTTON ── */
+    .btn-support {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #f59e0b; color: #0f172a;
+      text-decoration: none; font-size: 0.78rem; font-weight: 700;
+      padding: 5px 12px; border-radius: 20px;
+      transition: background .2s, transform .15s;
+      white-space: nowrap; margin-left: 16px;
+    }
+    .btn-support:hover { background: #fbbf24; transform: translateY(-1px); }</style>
 </head>
 <body>
 
@@ -378,6 +388,7 @@
     <a href="#about">About</a>
     <a href="#install">Install</a>
     <a href="#profile">Profile</a>
+    <a class="btn-support" href="https://buymeachai.ezee.li/gaurav6189" target="_blank" rel="noopener">☕ Support</a>
     <a href="https://www.linkedin.com/in/gs0601/" target="_blank">LinkedIn ↗</a>
   </div>
 </nav>
