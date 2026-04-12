@@ -170,7 +170,7 @@
 
     .divider {
       border: none; border-top: 1px solid var(--border);
-      margin: 0 24px;
+      max-width: 1100px; margin: 0 auto;
     }
 
     .about-box {
@@ -331,10 +331,15 @@
 
     /* ── TWEET TICKER ── */
     .tweet-ticker-section {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--mid);
+      padding: 0 24px;
+    }
+    .tweet-ticker-inner {
+      max-width: 1100px;
+      margin: 0 auto;
       overflow: hidden;
+      background: var(--mid);
+      border: 1px solid var(--border);
+      border-radius: 10px;
     }
     .tweet-ticker-header {
       display: flex; align-items: center; gap: 8px;
@@ -701,6 +706,7 @@
 
 <!-- TWEET TICKER -->
 <div class="tweet-ticker-section">
+  <div class="tweet-ticker-inner">
   <div class="tweet-ticker-header">
     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>&nbsp;<a href="https://x.com/grv02" target="_blank">@grv02</a>&nbsp;&middot; Latest from X
   </div>
@@ -708,6 +714,7 @@
     <div class="ticker-scroll-inner">
       <div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 17</div><div class="tweet-chip-text">Renault Duster returns at ₹10.29 lakh — 5 variants, rivals Creta & Seltos 🚗</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 5</div><div class="tweet-chip-text">Feb 2026 auto retail sales jump 25.6% YoY — 24.09L units, best-ever Feb: FADA 📊</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 13</div><div class="tweet-chip-text">PV wholesales hit record Feb — surge 10.6% to 4.18L units: SIAM 🏆</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 10</div><div class="tweet-chip-text">GST 2.0 cuts boost auto affordability — demand surge beyond festive trends 💰</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 12</div><div class="tweet-chip-text">VW Taigun facelift spied uncamouflaged — illuminated logos, updated LEDs 🔍</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 15</div><div class="tweet-chip-text">Mahindra Scorpio N facelift expected April 2026 — larger touchscreen, new trims ⚡</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 16</div><div class="tweet-chip-text">Indian PV industry to close H2 FY26 at ~4.65–4.70M units — near 15% growth 🇮🇳</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 13</div><div class="tweet-chip-text">SUV premiumisation trend continues — avg midsize SUV price now ₹18.8L 🔥</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 17</div><div class="tweet-chip-text">Renault Duster returns at ₹10.29 lakh — 5 variants, rivals Creta & Seltos 🚗</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 5</div><div class="tweet-chip-text">Feb 2026 auto retail sales jump 25.6% YoY — 24.09L units, best-ever Feb: FADA 📊</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 13</div><div class="tweet-chip-text">PV wholesales hit record Feb — surge 10.6% to 4.18L units: SIAM 🏆</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 10</div><div class="tweet-chip-text">GST 2.0 cuts boost auto affordability — demand surge beyond festive trends 💰</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 12</div><div class="tweet-chip-text">VW Taigun facelift spied uncamouflaged — illuminated logos, updated LEDs 🔍</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 15</div><div class="tweet-chip-text">Mahindra Scorpio N facelift expected April 2026 — larger touchscreen, new trims ⚡</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 16</div><div class="tweet-chip-text">Indian PV industry to close H2 FY26 at ~4.65–4.70M units — near 15% growth 🇮🇳</div></div></div><div class="tweet-chip"><div class="tweet-chip-x"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><div><div class="tweet-chip-date">Mar 13</div><div class="tweet-chip-text">SUV premiumisation trend continues — avg midsize SUV price now ₹18.8L 🔥</div></div></div>
     </div>
+  </div>
   </div>
 </div>
 
